@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "@antfu"
+  ],
+  "rules": {
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "only-multiline"
+      }
+    ],
+    "@typescript-eslint/semi": "off",
+    "antfu/if-newline": "off"
+  }
+}
