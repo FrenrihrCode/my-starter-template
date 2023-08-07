@@ -31,7 +31,10 @@
         "functions": "only-multiline"
       }
     ],
-    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/semi": [
+      "error",
+      "always"
+    ],
     "antfu/if-newline": "off",
     "vue/html-self-closing": [
       "error",

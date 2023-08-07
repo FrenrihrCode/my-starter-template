@@ -6,7 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import VueI18n from '@intlify/unplugin-vue-i18n/vite';
 import WebfontDownload from 'vite-plugin-webfont-dl';
-import Vue from "@vitejs/plugin-vue"
+import Vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   resolve: {
@@ -27,11 +27,21 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      // allow auto load markdown components under `./src/components/`
       extensions: ['vue'],
-      // allow auto import and register components used in markdown
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
+      resolvers: [
+        (componentName) => {
+          if (['VDropdown', 'VTooltip', 'VMenu'].includes(componentName))
+            return { name: componentName.slice(1), from: 'floating-vue' };
+        },
+      ],
+      types: [
+        {
+          from: 'vue-router',
+          names: ['RouterLink', 'RouterView'],
+        },
+      ],
     }),
 
     // https://github.com/antfu/vite-plugin-pwa
