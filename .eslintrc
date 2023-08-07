@@ -7,7 +7,20 @@
       "error",
       "always"
     ],
-    "comma-dangle": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        },
+        "multilineDetection": "brackets"
+      }
+    ],
     "@typescript-eslint/comma-dangle": [
       "error",
       {
@@ -19,6 +32,15 @@
       }
     ],
     "@typescript-eslint/semi": "off",
-    "antfu/if-newline": "off"
+    "antfu/if-newline": "off",
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "void": "any"
+        }
+      }
+    ],
+    "vue/singleline-html-element-content-newline": "off"
   }
 }

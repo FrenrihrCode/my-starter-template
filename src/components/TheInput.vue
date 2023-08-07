@@ -1,13 +1,18 @@
 <script setup lang="ts">
-const { modelValue } = defineModels<{
-  modelValue: string
-}>()
+const props = defineProps<{
+  modelValue: string;
+}>();
+const emit = defineEmits<{
+  (event: 'update:modelValue', value: string): void;
+}>();
+
+const data = useVModel(props, 'modelValue', emit);
 </script>
 
 <template>
   <input
     id="input"
-    v-model="modelValue"
+    v-model="data"
     type="text"
     v-bind="$attrs"
     p="x-4 y-2"
@@ -16,5 +21,5 @@ const { modelValue } = defineModels<{
     bg="transparent"
     border="~ rounded gray-200 dark:gray-700"
     outline="none active:none"
-  >
+  />
 </template>

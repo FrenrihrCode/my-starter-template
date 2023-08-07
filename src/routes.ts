@@ -13,8 +13,7 @@ export const routes: RouteRecordRaw[] = [
   { path: '/hi/:name', component: HiName, props: true },
   {
     path: '/:pathMatch(.*)*',
-    name: 'NotFound',
     component: NotFoundLayout,
-    children: [{ path: '', component: NotFound }],
+    children: [{ path: '', component: NotFound, name: 'NotFound' }],
   },
 ];

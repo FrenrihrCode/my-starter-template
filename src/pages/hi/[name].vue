@@ -2,7 +2,7 @@
 const props = defineProps<{ name: string }>()
 const router = useRouter()
 const user = useUserStore()
-const { t } = useI18n()
+ const { t } =  useI18n()
 
 watchEffect(() => {
   user.setNewName(props.name)
@@ -14,6 +14,7 @@ watchEffect(() => {
     <div text-4xl>
       <div i-carbon-pedestrian inline-block />
     </div>
+    <v-dropdown></v-dropdown>
     <p>
       {{ t('intro.hi', { name: props.name }) }}
     </p>
