@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: 255 115 179;
+    --color-secondary: 255 115 179;
+  }
+}
+
 html,
 body,
 #app {

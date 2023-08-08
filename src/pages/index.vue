@@ -14,31 +14,30 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
-    </div>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank"> Vitesse </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p>
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
-    <div>
-      <button m-3 text-sm btn :disabled="!name" @click="go">
-        {{ t('button.go') }}
-      </button>
-    </div>
+  <div class="bg-white h-screen w-screen">
+    <v-card class="w-1/2 h-1/2 m-auto" shadow divide-x>
+      <div class="p-3">
+        <v-input
+          id="name-input"
+          v-model="name"
+          :label="t('intro.whats-your-name')"
+          :placeholder="t('intro.whats-your-name')"
+        />
+        <v-button label="Button" class="mt-2" />
+      </div>
+      <div class="text-indigo-700 p-3">
+        <p>
+          <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank"> Vitesse </a>
+        </p>
+        <p>
+          <em>{{ t('intro.desc') }}</em>
+        </p>
+        <div>
+          <v-button :disabled="!name" @click="go">
+            {{ t('button.go') }}
+          </v-button>
+        </div>
+      </div>
+    </v-card>
   </div>
 </template>
