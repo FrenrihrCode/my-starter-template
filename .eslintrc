@@ -35,6 +35,10 @@
       "error",
       "always"
     ],
+    "@typescript-eslint/brace-style": [
+      "error",
+      "1tbs"
+    ],
     "antfu/if-newline": "off",
     "vue/html-self-closing": [
       "error",

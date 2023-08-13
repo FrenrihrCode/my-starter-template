@@ -12,3 +12,11 @@ intro:
   aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
+auth:
+  error: Invalid credentials
+  title: Log in
+  login-description: Enter and start customizing your restaurant
+  username: Username
+  password: Password
+  or: or
+generic-error: There was a problem processing your request
