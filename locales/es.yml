@@ -13,10 +13,12 @@ intro:
   whats-your-name: ¿Cómo te llamas?
 not-found: No se ha encontrado
 auth:
+  title: Bienvenido
+  description: Por favor inicie sesión
   error: Credenciales inválidas
-  title: Iniciar sesión
   login-description: Ingresa y comienza a customizar tu restaurante
   username: Nombre de usuario
   password: Contraseña
   or: o
+  terms: Terms and Conditions & Privacy Policy
 generic-error: Ocurrió un problema al procesar su solicitud

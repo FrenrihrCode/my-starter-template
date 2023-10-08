@@ -7,18 +7,17 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AuthCard: typeof import('./components/auth/AuthCard.vue')['default']
     AuthLoginCard: typeof import('./components/auth/AuthLoginCard.vue')['default']
-    LoginCard: typeof import('./components/auth/LoginCard.vue')['default']
+    AuthProvider: typeof import('./components/auth/AuthProvider.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheCounter: typeof import('./components/TheCounter.vue')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
-    TheInput: typeof import('./components/TheInput.vue')['default']
-    VButton: typeof import('./components/common/buttons/VButton.vue')['default']
-    VButtonTool: typeof import('./components/common/buttons/VButtonTool.vue')['default']
-    VCard: typeof import('./components/common/VCard.vue')['default']
-    VDropdown: typeof import('floating-vue')['Dropdown']
-    VIconButton: typeof import('./components/common/buttons/VIconButton.vue')['default']
-    VInput: typeof import('./components/common/inputs/VInput.vue')['default']
+    VButton: typeof import('./components/shared/buttons/VButton.vue')['default']
+    VButtonTool: typeof import('./components/shared/buttons/VButtonTool.vue')['default']
+    VCard: typeof import('./components/shared/VCard.vue')['default']
+    VIconButton: typeof import('./components/shared/buttons/VIconButton.vue')['default']
+    VInput: typeof import('./components/shared/inputs/VInput.vue')['default']
   }
 }

@@ -11,6 +11,9 @@ import Vue from '@vitejs/plugin-vue';
 export default defineConfig({
   resolve: {
     alias: {
+      'shared/': `${path.resolve(__dirname, 'src', 'shared')}/`,
+      'auth/': `${path.resolve(__dirname, 'src', 'modules', 'auth')}/`,
+      'app/': `${path.resolve(__dirname, 'src', 'modules', 'app')}/`,
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
@@ -21,7 +24,7 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/core', '@vueuse/head'],
       dts: 'src/auto-imports.d.ts',
-      dirs: ['src/composables', 'src/stores'],
+      dirs: ['src/shared/stores'],
       vueTemplate: true,
     }),
 

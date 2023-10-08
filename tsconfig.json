@@ -1,45 +1,54 @@
 {
-	"compilerOptions": {
-		"useDefineForClassFields": true,
-		"sourceMap": true,
-		"baseUrl": ".",
-		"module": "ESNext",
-		"target": "ESNext",
-		"lib": [
-			"DOM",
-			"ESNext"
-		],
-		"strict": true,
-		"esModuleInterop": true,
-		"jsx": "preserve",
-		"skipLibCheck": true,
-		"isolatedModules": true,
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"noUnusedLocals": true,
-		"strictNullChecks": true,
-		"allowJs": true,
-		"forceConsistentCasingInFileNames": true,
-		"types": [
-			"vitest",
-			"vite/client",
-			"vite-plugin-pwa/client",
-		],
-		"paths": {
-			"~/*": [
-				"src/*"
-			],
-		}
-	},
-	"vueCompilerOptions": {
-		"plugins": []
-	},
-	"include": [
-		"src"
-	],
-	"exclude": [
-		"dist",
-		"node_modules",
-		"cypress"
-	]
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "vitest",
+      "vite/client",
+      "vite-plugin-pwa/client"
+    ],
+    "paths": {
+      "auth/*": [
+        "src/modules/auth/*"
+      ],
+      "app/*": [
+        "src/modules/app/*"
+      ],
+      "shared/*": [
+        "src/shared/*"
+      ],
+      "~/*": [
+        "src/*"
+      ]
+    }
+  },
+  "vueCompilerOptions": {
+    "plugins": []
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "cypress"
+  ]
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { PROJECT_NAME } from '~/constants';
+import { isDark, preferredDark } from 'app/composables/dark';
+import { PROJECT_NAME } from 'app/constants';
 
 useHead({
   meta: [

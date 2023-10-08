@@ -1,12 +1,12 @@
 import type { RouteRecordRaw } from 'vue-router';
 
 // pages
-const NotFound = () => import('./pages/[...all].vue');
-const Home = () => import('./pages/index.vue');
-const HiName = () => import('./pages/hi/[name].vue');
+const NotFound = () => import('./shared/pages/[...all].vue');
+const Home = () => import('./shared/pages/index.vue');
+const HiName = () => import('./shared/pages/hi/[name].vue');
 
 // layouts
-const NotFoundLayout = () => import('./layouts/404.vue');
+const NotFoundLayout = () => import('./shared/layouts/404.vue');
 
 export const routes: RouteRecordRaw[] = [
   { path: '/', component: Home },
