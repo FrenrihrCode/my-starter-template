@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div
-    class="v-card bg-white rounded-md flex items-center justify-center"
+    class="v-card bg-white rounded-md"
     :class="{ 'shadow-md': shadow, 'divide-x': divideX, 'divide-y': divideY }"
   >
     <slot />

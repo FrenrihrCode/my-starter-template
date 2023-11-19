@@ -51,3 +51,4 @@ const data = useVModel(props, 'modelValue', emit);
   }
 }
 </style>
+~/modules/app/interfaces
